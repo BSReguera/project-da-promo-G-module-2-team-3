@@ -1,4 +1,4 @@
-id_pelicula,Genero,Nombre,Tipo,Año_estreno,Mes_estreno
+id_pelicula,Genero,Titulo,Tipo,Año_estreno,Mes_estreno
 tt0113092,accion,For the Cause,movie,2002,5
 tt0116391,accion,Gang,movie,2000,4
 tt0116628,accion,The Incorporated,movie,2000,
