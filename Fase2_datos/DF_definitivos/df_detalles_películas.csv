@@ -1,4 +1,4 @@
-id_film,Genero,Direccion,Guion,Puntuacion_IMDB,Puntuacion_Rottem,Duracion,Argumento
+id_pelicula,Genero,Direccion,Guion,Puntuacion_IMDB,Puntuacion_Rottem,Duracion,Argumento
 tt0011216,Drama,Germaine Dulac,Louis Delluc,7.0,69%,1h 7min,"Coveted by two different men, a woman turns to a third man instead."
 tt0062336,Drama,"Raúl Ruiz, Valeria Sarmiento","Raúl Ruiz, Omar Saavedra Santis",6.4,71%,1h 10min,
 tt0069049,Drama,Orson Welles,"Orson Welles, Oja Kodar",6.7,83%,2h 2min,
