@@ -1,19 +1,85 @@
-# proyecto-modulo2-equipo-3
+## Proyecto CinemExtract: Explorando el Séptimo Arte a través de Datos y Tecnología
+1. Introducción
+2. Documentacion
+3. Tecnologias utilizadas
+4. Preguntas frecuentes
+5. Informacion de contacto
+6. Agradecimientos
 
-Un Product Owner espera que un README proporcione una comprensión clara y concisa del proyecto, lo que facilita la colaboración y la comprensión por parte de todos los miembros del equipo y otras partes interesadas. Aquí hay algunas expectativas clave que un Product Owner puede tener para un README:
 
-1. Descripción del Proyecto: Debe proporcionar una descripción general del proyecto, incluyendo su propósito, contexto y cualquier información relevante que ayude a comprender su alcance y objetivos.
 
-2. Instrucciones de Instalación: Deben detallar los pasos necesarios para configurar y ejecutar el proyecto en un entorno local o en un servidor. Esto puede incluir requisitos de software, dependencias, comandos de instalación y configuración.
 
-3. Guía de Uso: Debe explicar cómo utilizar el proyecto una vez instalado. Esto puede incluir ejemplos de comandos, configuraciones necesarias y cualquier otro detalle importante para su funcionamiento.
+1. Introducción
+La plataforma de streaming BHO busca mejorar la calidad de su contenido y la satisfacción de sus usuarios mediante la aplicación de técnicas de análisis de datos. El proyecto CinemExtract tiene como objetivo identificar las películas y cortometrajes más populares y mejor valorados desde el año 2000 hasta la fecha, utilizando diversas fuentes de datos y tecnologías. Esto permitirá a BHO tomar decisiones informadas sobre qué contenido promocionar y destacar en su plataforma.
 
-4 Estructura del Proyecto: Es útil proporcionar una visión general de la estructura de archivos y directorios del proyecto, así como explicar el propósito de cada uno.
+2. Documentación
+La documentación detallada del proyecto se encuentra en el repositorio, estructurado por fases:
 
-5. Contribución y Guía de Contribución: Debe especificar cómo otros desarrolladores pueden contribuir al proyecto, incluyendo pautas de contribución, proceso de solicitud de extracción (pull request) y cualquier otra información relevante para la colaboración.
+Fase 1: Extracción de Datos de API de MoviesDataset. 
+        - Uso de API (MoviesDataset), archivos json, jupyter notebook, csv. 
+Fase 2: Extracción de Detalles de Películas con Selenium
+        - Uso de Selenium, archivos json, jupyter notebook, csv. 
+Fase 3: Extracción de Detalles de Actores con Selenium
+        - Uso de Selenium, jupyter notebook, csv. 
+Fase 4: Extracción de Tablas de los Premios Oscar con Beautiful Soup
+        - Uso de Beautful soup, archivos json, jupyter notebook, csv. 
+Fase 5: Creación de una Base de Datos
+        - Uso de Base de datos en SQL, myworkbench. 
+Fase 6: Inserción de Datos en la Base de Datos
+        - Uso de Base de datos en SQL, myworkbench, csv. 
+Fase 7: Realización de Consultas para Obtener Información
+        - Uso de Base de datos en SQL, myworkbench. 
 
-6. Licencia: Debe indicar la licencia bajo la cual se distribuye el proyecto, lo que puede ayudar a los usuarios a comprender los términos de uso y distribución del código.
+3. Tecnologías utilizadas
 
-7. Contacto: Puede ser útil proporcionar información de contacto para el mantenimiento del proyecto, como dirección de correo electrónico, enlace a la página del proyecto en GitHub u otros medios de comunicación.
+API:
+    La API de MoviesDataset se utiliza para extraer información sobre películas, como títulos, géneros y años de lanzamiento. Además, se utilizan APIs de sitios web como IMDB y Rotten Tomatoes para obtener información detallada sobre películas, como puntuaciones, directores y actores. Estas APIs se integran con Selenium para automatizar la extracción de datos de las páginas web correspondientes.
 
-En resumen, un README efectivo es una herramienta fundamental para comunicar claramente la naturaleza, el propósito y el funcionamiento de un proyecto, lo que ayuda a los desarrolladores y otras partes interesadas a comprender y contribuir de manera efectiva al proyecto.
+Selenium:
+    Se utiliza Selenium para la extracción de detalles de películas y actores desde sitios web como IMDB y Rotten Tomatoes. Selenium permite la automatización del navegador web, lo que facilita la navegación a través de las páginas web y la extracción de información específica, como puntuaciones, directores, actores, etc.
+
+Beautiful Soup:
+    Se utiliza Beautiful Soup para extraer información relevante de las tablas de los Premios Oscar desde 2000. Beautiful Soup es una biblioteca de Python que permite analizar y extraer datos de archivos HTML y XML. En este caso, se utiliza para analizar el contenido de las tablas HTML de los Premios Oscar y extraer información como la fecha de la ceremonia, mejor película, mejor director, etc.
+
+HTML:
+    El lenguaje HTML se utiliza para estructurar el contenido de las páginas web que se analizan con Selenium y se extraen con Beautiful Soup. Además, se puede utilizar HTML para generar informes o visualizaciones de datos.
+
+CSV:
+    Se utiliza el formato CSV (Comma Separated Values) para almacenar datos de manera tabular, como las listas de películas extraídas de la API de MoviesDataset. Este formato es fácil de leer y escribir, y es compatible con una amplia variedad de software, lo que lo hace ideal para el intercambio de datos.
+
+JSON:
+    Se utiliza el formato JSON (JavaScript Object Notation) para almacenar y estructurar datos de manera jerárquica, como la información detallada de las películas y actores extraídos con Selenium. JSON es fácilmente legible por humanos y también es fácil de analizar y generar en Python, lo que lo hace útil para el intercambio de datos entre diferentes sistemas y aplicaciones.
+    
+Python:
+    Python es el lenguaje de programación principal utilizado en todo el proyecto. Se utiliza para escribir scripts que realizan la extracción, procesamiento, análisis y almacenamiento de datos. Python ofrece una amplia gama de bibliotecas y herramientas que facilitan el desarrollo de aplicaciones de análisis de datos y web scraping, lo que lo convierte en una opción popular para proyectos como CinemExtract.
+SQL:
+    Se utiliza SQL para la creación de una base de datos que almacene toda la información recopilada durante el proyecto. SQL se encarga de definir la estructura de la base de datos, crear tablas y establecer conexiones entre ellas. Además, se utilizan consultas SQL para la inserción de datos en la base de datos y para realizar consultas específicas para obtener información requerida por el proyecto.
+
+4. Preguntas Frecuentes
+    1. ¿Cuáles son las principales tecnologías utilizadas en el proyecto?
+Las principales tecnologías utilizadas son API, Selenium, Beautiful Soup, HTML, CSV, JSON y Python.
+    2. ¿Qué información se extrae de las películas y cortometrajes?
+Se extrae información como el título, género, año de estreno, director, actores, puntuaciones, entre otros.
+    3. ¿Cómo se organiza la base de datos?
+La base de datos se estructura de acuerdo a las tablas necesarias para almacenar la información de películas, actores, premios, etc.
+
+5. Información de Contacto
+Para cualquier consulta o colaboración, puedes contactarnos a través de:
+
+Página web: www.cinemetrics.com
+Correo electrónico: hola@cinemetrics.com
+Teléfono: +91 527 8903
+Instagram: @cinemetrics
+
+6. Agradecimientos
+Queremos expresar nuestro agradecimiento a todo el equipo involucrado en el proyecto, así como a nuestras compañeras por su apoyo y ayuda en caso de consulta. También agradecemos a nuestros profesores por su apoyo ante la resolución de conflictos en el código y en el aspecto teórico.
+¡Gracias a todos por hacer posible este proyecto!
+
+OPCION 2 DE AGRADECIMIENTOS: 
+6. Agradecimientos
+Nos gustaría extender nuestro más sincero agradecimiento a todas las personas que contribuyeron al éxito de este proyecto:
+Equipo de Desarrollo: A cada miembro del equipo que dedicó su tiempo, esfuerzo y habilidades para llevar a cabo este proyecto. Su colaboración y compromiso fueron fundamentales para alcanzar nuestros objetivos.
+Compañeras de Adalab: Agradecemos a nuestras compañeras de Adalab por su apoyo continuo y por estar disponibles para brindar ayuda y orientación cuando más lo necesitábamos. Su apoyo fue invaluable para superar los desafíos y obstáculos que encontramos en el camino.
+Profesores: Queremos expresar nuestra gratitud a nuestros profesores por su guía experta y su apoyo constante durante todo el proceso. Su conocimiento y experiencia fueron fundamentales para resolver problemas técnicos y teóricos, y para impulsar nuestro aprendizaje y crecimiento.
+Adalab: Por proporcionarnos un entorno de aprendizaje estimulante y colaborativo donde pudimos desarrollar nuestras habilidades y trabajar en proyectos significativos como este. Estamos agradecidos por la oportunidad de formar parte de esta comunidad y por el apoyo brindado a lo largo del camino.
+¡Gracias a todos por hacer posible este proyecto y por contribuir al éxito de nuestro equipo!
