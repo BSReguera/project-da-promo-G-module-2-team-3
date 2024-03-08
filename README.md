@@ -72,14 +72,6 @@ Teléfono: +91 527 8903
 Instagram: @cinemetrics
 
 6. Agradecimientos
-Queremos expresar nuestro agradecimiento a todo el equipo involucrado en el proyecto, así como a nuestras compañeras por su apoyo y ayuda en caso de consulta. También agradecemos a nuestros profesores por su apoyo ante la resolución de conflictos en el código y en el aspecto teórico.
-¡Gracias a todos por hacer posible este proyecto!
+Queremos expresar nuestro agradecimiento a todo el equipo involucrado en el proyecto, así como a nuestras compañeras por su apoyo y ayuda en caso de consulta, en especial a Marina Escobar (GITHUB:marinaescobar) por su apoyo en todo el proceso del desrollo del código. También agradecemos a nuestros profesores Cesar y Carla por su apoyo ante la resolución de conflictos en el código y en el aspecto teórico.
 
-OPCION 2 DE AGRADECIMIENTOS: 
-6. Agradecimientos
-Nos gustaría extender nuestro más sincero agradecimiento a todas las personas que contribuyeron al éxito de este proyecto:
-Equipo de Desarrollo: A cada miembro del equipo que dedicó su tiempo, esfuerzo y habilidades para llevar a cabo este proyecto. Su colaboración y compromiso fueron fundamentales para alcanzar nuestros objetivos.
-Compañeras de Adalab: Agradecemos a nuestras compañeras de Adalab por su apoyo continuo y por estar disponibles para brindar ayuda y orientación cuando más lo necesitábamos. Su apoyo fue invaluable para superar los desafíos y obstáculos que encontramos en el camino.
-Profesores: Queremos expresar nuestra gratitud a nuestros profesores por su guía experta y su apoyo constante durante todo el proceso. Su conocimiento y experiencia fueron fundamentales para resolver problemas técnicos y teóricos, y para impulsar nuestro aprendizaje y crecimiento.
-Adalab: Por proporcionarnos un entorno de aprendizaje estimulante y colaborativo donde pudimos desarrollar nuestras habilidades y trabajar en proyectos significativos como este. Estamos agradecidos por la oportunidad de formar parte de esta comunidad y por el apoyo brindado a lo largo del camino.
 ¡Gracias a todos por hacer posible este proyecto y por contribuir al éxito de nuestro equipo!
