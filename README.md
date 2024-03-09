@@ -29,7 +29,7 @@ Fase 7: Realización de Consultas para Obtener Información - Uso de Base de dat
 
 ## API
 
-La API de MoviesDataset se utiliza para extraer información sobre películas, como títulos, géneros y años de lanzamiento. Además, se utilizan APIs de sitios web como IMDB y Rotten Tomatoes para obtener información detallada sobre películas, como puntuaciones, directores y actores. Estas APIs se integran con Selenium para automatizar la extracción de datos de las páginas web correspondientes.
+La API de MoviesDataset se utiliza para extraer información sobre películas, como títulos, géneros y años de lanzamiento. Además, se utilizan APIs de sitios web como IMDB y Rottem Tomatoes para obtener información detallada sobre películas, como puntuaciones, directores y actores. Estas APIs se integran con Selenium para automatizar la extracción de datos de las páginas web correspondientes.
 
 ## Selenium
 
