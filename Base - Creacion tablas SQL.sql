@@ -1,5 +1,10 @@
 -- Proyecto -Equipo 3 - Tablas SQL
 
+<<<<<<< HEAD
+CREATE SCHEMA cinemextract_bho;
+USE cinemextract_bho;
+=======
+>>>>>>> 0125e3160438bb60012a4f0f36a7d71eb06611d1
 
 -- Tabla Peliculas -- 
 CREATE TABLE Peliculas (
@@ -32,7 +37,11 @@ CREATE TABLE Actores (
     titulos TEXT,
     rol TEXT,
     premios TEXT,
+<<<<<<< HEAD
+    CONSTRAINT `fk_id_pelicula_PELICULAS`
+=======
     CONSTRAINT `fk_id_pelicula`
+>>>>>>> 0125e3160438bb60012a4f0f36a7d71eb06611d1
     FOREIGN KEY (id_PELICULA) REFERENCES Peliculas(id_pelicula)
 );
 
