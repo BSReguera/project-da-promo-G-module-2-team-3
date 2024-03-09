@@ -30,7 +30,12 @@ La documentación detallada del proyecto se encuentra en el repositorio, estruct
 # 3. TECNOLOGIAS UTILIZADAS: 
 
 ## API
+<<<<<<< HEAD
+
+La API de MoviesDataset se utiliza para extraer información sobre películas, como títulos, géneros y años de lanzamiento. Además, se utilizan APIs de sitios web como IMDB y Rottem Tomatoes para obtener información detallada sobre películas, como puntuaciones, directores y actores. Estas APIs se integran con Selenium para automatizar la extracción de datos de las páginas web correspondientes.
+=======
 La API de MoviesDataset se utiliza para extraer información sobre películas, como títulos, géneros y años de lanzamiento. Además, se utilizan APIs de sitios web como IMDB y Rotten Tomatoes para obtener información detallada sobre películas, como puntuaciones, directores y actores. Estas APIs se integran con Selenium para automatizar la extracción de datos de las páginas web correspondientes.
+>>>>>>> f0a4aed9be8f23173d53b822073c9c2b07cbd6d5
 
 ## Selenium
 Se utiliza Selenium para la extracción de detalles de películas y actores desde sitios web como IMDB y Rotten Tomatoes. Selenium permite la automatización del navegador web, lo que facilita la navegación a través de las páginas web y la extracción de información específica, como puntuaciones, directores, actores, etc.
