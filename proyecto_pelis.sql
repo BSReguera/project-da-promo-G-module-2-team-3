@@ -35,13 +35,11 @@ USE proyecto_pelis;
 
 CREATE TABLE IF NOT EXISTS Actores (
 	id_actor VARCHAR(100) NOT NULL,
-    id_pelicula VARCHAR(10) NOT NULL,
     Nombre_actor VARCHAR(255),
     Año_nacimiento VARCHAR(10),
     Profesion VARCHAR(255),
     Conocido_por VARCHAR(255),
     PRIMARY KEY (id_actor),
-	FOREIGN KEY (id_pelicula) REFERENCES Peliculas(id_pelicula)
 );
 
 USE proyecto_pelis;
@@ -55,23 +53,31 @@ CREATE TABLE IF NOT EXISTS Premios (
     id_pelicula VARCHAR (10) NOT NULL, 
     Mejor_director VARCHAR (255), 
     Mejor_actor VARCHAR (255),
-    Mejor_actriz VARCHAR (255),
     id_actor VARCHAR (100) NOT NULL,
+    Mejor_actriz VARCHAR (255),
+    id_actriz VARCHAR (100) NOT NULL,
     PRIMARY KEY (id_premio),
-    FOREIGN KEY (id_actor) REFERENCES Actores(id_actor),
+    FOREIGN KEY (id_actor) REFERENCES Actor(id_actor),
+    FOREIGN KEY (id_actriz) REFERENCES Actor(id_actor),
     FOREIGN KEY (id_pelicula) REFERENCES Peliculas(id_pelicula)
 );
 
 USE proyecto_pelis;
 
-CREATE TABLE IF NOT EXISTS Peli_actor_premio (
+CREATE TABLE IF NOT EXISTS Peli_actor (
 id_pelicula VARCHAR (10) NOT NULL,
 FOREIGN KEY (id_pelicula) REFERENCES Detalles_Peliculas(id_pelicula),
+id_actor VARCHAR (100) NOT NULL,
+FOREIGN KEY (id_actor) REFERENCES Actores(id_actor),
+);
+
+CREATE TABLE IF NOT EXISTS actor_premio (
 id_actor VARCHAR (100) NOT NULL,
 FOREIGN KEY (id_actor) REFERENCES Actores(id_actor),
 id_premio INT NOT NULL AUTO_INCREMENT,
 FOREIGN KEY (id_premio) REFERENCES Premios(id_premio)
 );
+
 
 
 LOAD DATA INFILE 'proyecto_json_generos/accion.csv' 
