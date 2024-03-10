@@ -11,7 +11,7 @@
 # 1. INTRODUCCION: 
 ¡Bienvenidos al proyecto CinemExtract! 
 
-El equipo Cinemetrix compuesto por: Beatriz Sánchez, Isabel Correal, Maite Barrero y María Crespo. Ha sido el encargado de realizar este maravilloso proyecto Cinemextract. 
+El equipo de la empresa Cinemetrix compuesto por: Beatriz Sánchez, Isabel Correal, Maite Barrera y María Crespo. Ha sido el encargado de realizar este maravilloso proyecto Cinemextract. 
 
 La plataforma de streaming BHO busca mejorar la calidad de su contenido y la satisfacción de sus usuarios mediante la aplicación de técnicas de análisis de datos. 
 El proyecto CinemExtract tiene como objetivo identificar las películas y cortometrajes más populares y mejor valorados desde el año 2000 hasta la fecha, utilizando diversas fuentes de datos y tecnologías. Esto permitirá a BHO tomar decisiones informadas sobre qué contenido promocionar y destacar en su plataforma.
@@ -57,7 +57,7 @@ Se utiliza SQL para la creación de una base de datos que almacene toda la infor
 
 
 # 4. PREGUNTAS FRECUENTES:
-- ¿Cuáles son las principaLes tecnologías utilizadas en el proyecto? Las principales tecnologías utilizadas son API, Selenium, Beautiful Soup, HTML, CSV, JSON y Python.
+- ¿Cuáles son las principaLes tecnologías utilizadas en el proyecto? Las principales tecnologías utilizadas son API, Selenium, Beautiful Soup, HTML, CSV, JSON, Jupyter notebooks y Python.
 - ¿Qué información se extrae de las películas y cortometrajes? Se extrae información como el título, género, año de estreno, director, actores, puntuaciones, entre otros.
 - ¿Cómo se organiza la base de datos? La base de datos se estructura de acuerdo a las tablas necesarias para almacenar la información de películas, actores, premios, etc.
 
