@@ -1,16 +1,20 @@
 -- PROYECTO CINEMETRICS - MODULO 2 - EQUIPO 3 - CONSULTAS
 
--- PROYECTO CINEMETRICS - MODULO 2 - EQUIPO 3 - CONSULTAS
-
 -- 1. ¿Qué géneros han recibido más premios Óscar?
-SELECT `p`.`genero`, COUNT(`mejor_pelicula`) AS "Total_premios"
+SELECT `p`.`genero`, COUNT(`pr`.`mejor_pelicula`) AS "Total_premios"
 	FROM `peliculas` AS `p`
 	INNER JOIN  `premios` AS `pr`
 		ON `p`.`id_pelicula`= `pr`.`id_pelicula`
     WHERE `pr`.`mejor_pelicula` IS NOT NULL
 	GROUP BY `p`.`genero`
-	ORDER BY "Total_premios" DESC;
-
+    HAVING COUNT(`pr`.`mejor_pelicula`) = (SELECT MAX(`Total_premios`)
+												FROM (SELECT COUNT(`pr`.`mejor_pelicula`) AS "Total_premios"
+														FROM `peliculas` AS `p`
+														INNER JOIN `premios` AS `pr`
+															ON `p`.`id_pelicula` = `pr`.`id_pelicula`
+														WHERE `pr`.`mejor_pelicula` IS NOT NULL
+														GROUP BY `p`.`genero`) AS `subquery`);
+                                                        
 -- 2. ¿Qué género es el mejor valorado en IMDB?
 SELECT `p`.`genero`, ROUND(AVG(`dp`.`puntuacion_IMDB`), 2) AS "IMDB_rating"
 	FROM `peliculas` AS `p`
@@ -62,17 +66,23 @@ SELECT `a`.`Nombre_actor`, COUNT(*) as "total_premios"
 		ON `a`.`id_actor` = `pr`.`id_actor`
 	WHERE `Mejor_actor` IS NOT NULL OR `Mejor_actriz` IS NOT NULL
 	GROUP BY `a`.`Nombre_actor`
-	ORDER BY "total_premios" DESC
+	ORDER BY COUNT(*) DESC
 	LIMIT 1;
     
 -- 8. ¿Hay algun actor/actriz que haya recibido más de un premio Óscar?
-SELECT `a`.`Nombre_actor`, `pr`.`Mejor_actor`, `pr`.`Mejor_actriz`
-	FROM `actores`AS `a`
-    INNER JOIN `premios`AS `pr`
-		ON `a`.`id_actor` = `pr`.`id_actor`
-	WHERE `Mejor_actor` LIKE '%Premio Oscar%' OR `Mejor_actriz` LIKE '%Premio Oscar%'
-	GROUP BY `a`.`id_actor`,`pr`.`Mejor_actor`, `pr`.`Mejor_actriz`
-	HAVING COUNT(*) > 1;
+SELECT `a`.`nombre_actor`, COUNT(`o`.`id_actor`) AS "Numero_Oscars"
+	FROM `premios` AS `o`
+	INNER JOIN `actores` AS `a`
+		ON `a`.`id_actor` = `o`.`id_actor`
+	GROUP BY `o`.`id_actor`
+	HAVING COUNT(`o`.`id_actor`) > 1
+UNION
+SELECT `a`.`nombre_actor`, COUNT(`o`.`id_actor`) AS "Numero_Oscars"
+	FROM `actores` AS `a`
+	INNER JOIN `premios` AS `o`
+		ON `a`.`id_actor` = `o`.`id_actriz`
+	GROUP BY `o`.`id_actriz`
+	HAVING COUNT(`o`.`id_actor`) > 1;
 
 -- 9. ¿Qué género es el mejor valorado en Rottem?
 SELECT `genero`, ROUND(AVG(`Puntuacion_Rottem`), 2) as "promedio_rottem"
