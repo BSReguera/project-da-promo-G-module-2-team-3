@@ -5,13 +5,12 @@
 2. [Documentación](#2-documentación)
 3. [Tecnologías utilizadas](#3-tecnolgias-utilizadas)
 4. [Preguntas frecuentes](#4-preguntas-frecuentes)
-5. [Informacion de contacto](#5-informacion-de-contacto)
-6. [Agradecimientos](#6-agradecimientos)
+5. [Agradecimientos](#5-agradecimientos)
 
 # 1. INTRODUCCION: 
 ¡Bienvenidos al proyecto CinemExtract! 
 
-El equipo de la empresa Cinemetrix compuesto por: Beatriz Sánchez, Isabel Correal, Maite Barrera y María Crespo. Ha sido el encargado de realizar este maravilloso proyecto Cinemextract. 
+El equipo de la empresa Cinemetrix compuesto por: [Beatriz Sánchez](https://github.com/BSReguera), [Isabel Correal](https://github.com/icorreald), [Maite Barrera](https://github.com/maitebarreravillarias) y [María Crespo](https://github.com/Macresca). Ha sido el encargado de realizar este maravilloso proyecto Cinemextract. 
 
 La plataforma de streaming BHO busca mejorar la calidad de su contenido y la satisfacción de sus usuarios mediante la aplicación de técnicas de análisis de datos. 
 El proyecto CinemExtract tiene como objetivo identificar las películas y cortometrajes más populares y mejor valorados desde el año 2000 hasta la fecha, utilizando diversas fuentes de datos y tecnologías. Esto permitirá a BHO tomar decisiones informadas sobre qué contenido promocionar y destacar en su plataforma.
@@ -24,13 +23,12 @@ La documentación detallada del proyecto se encuentra en el repositorio, estruct
 - Fase 2: Extracción de Detalles de Películas con Selenium - Uso de Selenium, archivos json, jupyter notebook y csv.
 - Fase 3: Extracción de Detalles de Actores con Selenium - Uso de Selenium, jupyter notebook y csv
 - Fase 4: Extracción de Tablas de los Premios Oscar con Beautiful Soup - Uso de Beautful soup, archivos json, jupyter notebook y csv.
-- Fase 5: Creación de una Base de Datos - Uso de Base de datos en SQL y myworkbench.
-- Fase 6: Inserción de Datos en la Base de Datos - Uso de Base de datos en SQL, myworkbench, csv y jupyter notebook.
-- Fase 7: Realización de Consultas para Obtener Información - Uso de Base de datos en SQL y myworkbench.
+- Fase 5: Creación de una Base de Datos - Uso de Base de datos en SQL y MySQL workbench.
+- Fase 6: Inserción de Datos en la Base de Datos - Uso de Base de datos en SQL, MySQL workbench, csv y jupyter notebook.
+- Fase 7: Realización de Consultas para Obtener Información - Uso de Base de datos en SQL y MySQL workbench.
 
 
 # 3. TECNOLOGIAS UTILIZADAS: 
-
 ## API
 La API de MoviesDataset se utiliza para extraer información sobre películas, como títulos, géneros y años de lanzamiento. Además, se utilizan APIs de sitios web como IMDB y Rottem Tomatoes para obtener información detallada sobre películas, como puntuaciones, directores y actores. Estas APIs se integran con Selenium para automatizar la extracción de datos de las páginas web correspondientes.
 
@@ -62,15 +60,7 @@ Se utiliza SQL para la creación de una base de datos que almacene toda la infor
 - ¿Cómo se organiza la base de datos? La base de datos se estructura de acuerdo a las tablas necesarias para almacenar la información de películas, actores, premios, etc.
 
 
-# 5. INFORMACION DE CONTACTO: 
-Para cualquier consulta o colaboración, puedes contactarnos a través de:
-- Página web: www.cinemetrics.com 
-- Correo electrónico: hola@cinemetrics.com
-- Teléfono: +91 527 8903
-- Instagram: @cinemetrics
-
-# 6. AGRADECIMIENTOS: 
-
+# 5. AGRADECIMIENTOS: 
 Queremos expresar nuestro agradecimiento a todo el equipo involucrado en el proyecto, así como a nuestras compañeras por su apoyo y ayuda en caso de consulta, en especial a Marina Escobar (GitHub:marinaescobar) por su apoyo en todo el proceso del desarollo del código. También, agradecemos a nuestros profesores César Valle y Carla Álvarez López por su apoyo ante la resolución de conflictos en el código y en el aspecto teórico.
 
 
