@@ -80,6 +80,11 @@ premio VARCHAR (100),
 FOREIGN KEY (id_actor) REFERENCES Actores(id_actor)
 );
 
+DROP TABLE actor_premio;
+
+ALTER TABLE `actor_premio`
+ADD COLUMN `id_premio` INT NOT NULL AUTO_INCREMENT PRIMARY KEY;
+
 ALTER TABLE `actor_premio`
 MODIFY COLUMN `premio` 
 VARCHAR(500);

@@ -30,7 +30,7 @@ SELECT `Año_estreno`, COUNT(*) AS "Total_peliculas"
 	FROM `peliculas` AS `p`
 	WHERE `tipo` = 'movie'
 	GROUP BY `Año_estreno`
-	ORDER BY "Total_peliculas" DESC
+    ORDER BY COUNT(*) DESC
     LIMIT 1;
 
 -- 4. ¿En que año se estrenaron mas cortos?
@@ -38,7 +38,7 @@ SELECT `Año_estreno`, COUNT(*) AS "Total_cortos"
 	FROM `peliculas` AS `p`
 	WHERE `tipo` = 'short'
 	GROUP BY `Año_estreno`
-	ORDER BY "Total_cortos" DESC
+	ORDER BY COUNT(*) DESC
     LIMIT 1;
     
 -- 5. ¿Cuál es el mejor corto valorada en IMDB?
@@ -59,15 +59,15 @@ SELECT `titulo`, `puntuacion_IMDB`
 	ORDER BY `puntuacion_IMDB` DESC
 	LIMIT 1;
     
--- 7. ¿Qué actor/actriz ha recibido más premios?
-SELECT `a`.`Nombre_actor`, COUNT(*) as "total_premios"
-	FROM `actores`AS `a`
-    INNER JOIN `premios`AS `pr`
-		ON `a`.`id_actor` = `pr`.`id_actor`
-	WHERE `Mejor_actor` IS NOT NULL OR `Mejor_actriz` IS NOT NULL
-	GROUP BY `a`.`Nombre_actor`
-	ORDER BY COUNT(*) DESC
-	LIMIT 1;
+-- 7. ¿Qué actor/actriz ha recibido más premios?	
+
+SELECT `A`.`Nombre_actor`, COUNT(`AC`.`id_premio`) AS `total_premios`
+FROM `actor_premio` AS AC
+INNER JOIN `actores` AS A 
+	ON `AC`.`id_actor` = `A`.`id_actor`
+GROUP BY `A`.`Nombre_actor`
+ORDER BY COUNT(`AC`.`id_premio`) DESC
+LIMIT 1 ;
     
 -- 8. ¿Hay algun actor/actriz que haya recibido más de un premio Óscar?
 SELECT `a`.`nombre_actor`, COUNT(`o`.`id_actor`) AS "Numero_Oscars"
@@ -99,13 +99,13 @@ SELECT `titulo`, `puntuacion_Rottem`
 		ON `p`.`id_pelicula` = `dp`.`id_pelicula`
 	WHERE `tipo` = 'short'
 	ORDER BY `puntuacion_Rottem` DESC
-	LIMIT 1;
+	LIMIT 10;
 
 -- 11. ¿Cuál es la película mejor valorada en Rottem?
-SELECT `titulo`, `puntuacion_Rottem`
+SELECT DISTINCT`titulo`, `puntuacion_Rottem`
 	FROM `Peliculas`AS `p`
 	JOIN `Detalles_Peliculas` AS `dp`
 		ON `p`.`id_pelicula` = `dp`.`id_pelicula`
 	WHERE `tipo` = 'movie'
 	ORDER BY `puntuacion_Rottem` DESC
-	LIMIT 1;
+	LIMIT 10;
